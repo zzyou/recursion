@@ -7,6 +7,9 @@
 */
 
 function binaryConvertor(num) {
+    if (num < 0) {
+        return console.log("I don't want a negative number");
+    }
     if (num === 0) {
         return 0;
     }
