@@ -16,7 +16,7 @@ function binaryConvertor(num) {
     if (num === 1) {
         return 1;
     }
-    let power = Math.floor(Math.sqrt(num));
+    let power = Math.floor(Math.log(num)/Math.log(2));
     return Math.pow(10, power) + binaryConvertor(num - Math.pow(2, power));
 }
 
