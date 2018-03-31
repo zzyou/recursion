@@ -1,5 +1,5 @@
 /* Write a function converting a number to a binary number.
-6 = 1* 4 + 1 * 2 + 1 * 1 => 110
+6 = 1 * 4 + 1 * 2 + 0 * 1 => 110
 5 = 1 * 4 + 0 * 2 + 1 * 1 => 101
 4 = 1 * 4 + 0 * 2 + 0 * 0 => 100
 3 = 1 * 2 + 1 * 1 => 11
