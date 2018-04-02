@@ -20,6 +20,15 @@ function binaryConvertor(num) {
     return Math.pow(10, power) + binaryConvertor(num - Math.pow(2, power));
 }
 
+// another method:
+function binaryConvertor(num) {
+    if (num >= 1) {
+        return binaryConvertor(num / 2) + (num % 2);
+    }
+    return '';
+}
+
+
 binaryConvertor(13); // 1101
 binaryConvertor(6); // 110
 binaryConvertor(5); // 101
