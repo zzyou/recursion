@@ -1,7 +1,7 @@
 /* Write a function converting a number to a binary number.
-6 = 1* 4 + 1 * 2 + 1 * 1 => 110
+6 = 1 * 4 + 1 * 2 + 0 * 1 => 110
 5 = 1 * 4 + 0 * 2 + 1 * 1 => 101
-4 = 1 * 4 + 0 * 2 + 0 * 0 => 100
+4 = 1 * 4 + 0 * 2 + 0 * 1 => 100
 3 = 1 * 2 + 1 * 1 => 11
 13 = 1 * 8 + 1 * 4 + 0 * 2 + 1 * 1 => 1101
 */
@@ -16,7 +16,7 @@ function binaryConvertor(num) {
     if (num === 1) {
         return 1;
     }
-    let power = Math.floor(Math.sqrt(num));
+    let power = Math.floor(Math.log(num)/Math.log(2));
     return Math.pow(10, power) + binaryConvertor(num - Math.pow(2, power));
 }
 
