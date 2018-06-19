@@ -7,27 +7,31 @@
 */
 
 function binaryConvertor(num) {
-    if (num < 0) {
-        return console.log("I don't want a negative number");
-    }
-    if (num === 0) {
-        return 0;
-    }
-    if (num === 1) {
-        return 1;
-    }
-    let power = Math.floor(Math.log(num)/Math.log(2));
-    return Math.pow(10, power) + binaryConvertor(num - Math.pow(2, power));
+  if (num < 0) {
+    return console.log("I don't want a negative number");
+  }
+  if (num === 0) {
+    return 0;
+  }
+  if (num === 1) {
+    return 1;
+  }
+  let power = Math.floor(Math.log(num) / Math.log(2));
+  return Math.pow(10, power) + binaryConvertor(num - Math.pow(2, power));
 }
 
 // another method:
 function binaryConvertor(num) {
-    if (num >= 1) {
-        return binaryConvertor(num / 2) + (num % 2);
-    }
-    return '';
+  if (num >= 1) {
+    return binaryConvertor(Math.floor(num / 2)) + (num % 2);
+  }
+  return "";
 }
 
+// toString(2):
+function binaryConvertor(num) {
+  return num.toString(2);
+}
 
 binaryConvertor(13); // 1101
 binaryConvertor(6); // 110
